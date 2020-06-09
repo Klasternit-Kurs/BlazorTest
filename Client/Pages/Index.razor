@@ -1,0 +1,46 @@
+﻿@page "/"
+
+
+
+ 
+<ul>
+	@foreach (string s in lista)
+	{
+		<li>@s</li>
+	}
+</ul>
+
+@if  (lista.Count > 5)
+{
+	<p>Vise od pet!</p>
+}else
+{
+	<p>Manje od pet!</p>
+}
+
+<h1>Hello, world!</h1>
+@{
+	Console.WriteLine("ASdasd");
+
+	<button class="btn-primary" @onclick="Klik" >Duggggme</button>
+
+	for (int i = 0; i < 5; i++)
+	{
+		<p>Bla  @i   bla</p>
+	}
+}
+<p>Welcome to your new app.</p>
+
+@code
+{ 
+	string s = "asd";
+	string unos = "zklj";
+	List<string> lista = new List<string>();
+
+	public void Klik()
+	{
+		lista.Add(unos);
+		//StateHasChanged();
+	}
+}
+
